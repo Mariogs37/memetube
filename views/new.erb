@@ -1,0 +1,9 @@
+<form method='post' action='<%= @row.nil? ? "/create" : "/videos/#{@row['id']}" %>'>
+  <input value='<%= @row['title'] if @row %>' type='text' name='title' autofocus>
+  <input value='<%= @row['description'] if @row %>' type='text' name='description'>
+  <input value='<%= @row['URL'] if @row %>' type='text' name='URL'>
+  <input value='<%= @row['genre'] if @row %>' type='text' name='genre'>
+  <button class="btn btn-success"><%= @row.nil? ? "New Video" : "Save Changes"  %></button>
+</form>
+
+<%# @row.nil ? "btn btn-success" : "btn btn-warning" %>

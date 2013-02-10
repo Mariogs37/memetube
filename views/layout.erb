@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ben's Favorite YouTube Clips</title>
+    <link href="/css/css_reset.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src='/js/jquery-1.9.1.js'></script>
+    <script src='/bootstrap/js/bootstrap.js'></script>
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+      <nav>
+        <ul>
+          <div class="navbar navbar-inverse">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <ul class="nav">
+                  <li><a href='/'>Home</a></li>
+                  <li><a href='/new'>Add a Video</a></li>
+                  <li><a href='/videos'>Videos</a></li>
+                  <% @nav_rows.each do |row| %>
+                    <li><a href='/videos/<%= row['genre'] %>'><%= row['genre'] %></a></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </nav>
+
+    <%= yield %>
+
+  </body>
+</html>
