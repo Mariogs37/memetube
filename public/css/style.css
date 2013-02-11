@@ -1,3 +1,31 @@
+body {
+  background-image: url('/img/ecailles.png');
+}
+
 #modify {
+  margin-left: 160px;
+  float: left;
+}
+
+#welcome {
+  text-align: center;
+  margin-top: 150px;
+}
+
+#homebuttons {
+  text-align: center;
+}
+
+#homebuttons a:link {
+  color: white;
+}
+
+#form_shift {
   margin-left: 25px;
+}
+
+footer {
+  text-align: center;
+  clear: both;
+
 }

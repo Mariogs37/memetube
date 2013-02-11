@@ -1,9 +1,12 @@
 <form method='post' action='<%= @row.nil? ? "/create" : "/videos/#{@row['id']}" %>'>
-  <input value='<%= @row['title'] if @row %>' type='text' name='title' autofocus>
-  <input value='<%= @row['description'] if @row %>' type='text' name='description'>
-  <input value='<%= @row['URL'] if @row %>' type='text' name='URL'>
-  <input value='<%= @row['genre'] if @row %>' type='text' name='genre'>
-  <button class="btn btn-success"><%= @row.nil? ? "New Video" : "Save Changes"  %></button>
+  <div id="form_shift">
+    <p>Title: <input value='<%= @row['title'] if @row %>' type='text' name='title' autofocus></p>
+    <p>Description (Keep it brief!): <input value='<%= @row['description'] if @row %>' type='text' name='description'></p>
+    <p>URL: <input value='<%= @row['URL'] if @row %>' type='text' name='URL'></p>
+    <p>Genre (e.g. funny, sports, politics, etc.): <input value='<%= @row['genre'] if @row %>' type='text' name='genre'>
+    <br>
+    <button class="btn btn-success"><%= @row.nil? ? "Favorite a New Video" : "Save Changes"  %></button>
+  </div>
 </form>
 
 <%# @row.nil ? "btn btn-success" : "btn btn-warning" %>
